@@ -1,4 +1,5 @@
 <?php    
+
 if('cli'!==PHP_SAPI) return;
 if(!isset($argv[1])) return;
 
@@ -8,6 +9,7 @@ $workmins;
 $fpi=file($argv[1],FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 foreach ($fpi as $line){
   $fct=intval($line);
+  $fct+=(6*60*60);
   if($first){
     $first=false;
     $workmins=array_fill(0,1440,0);
