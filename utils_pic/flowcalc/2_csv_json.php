@@ -16,7 +16,7 @@ foreach ($fpi as $line){
     $y= date ("Y", $fct);
     $m= date ("m", $fct);
     $d= date ("d", $fct);
-    $nfile=$y."-".$m."-".$d.".json";                      // new file name
+    $nfile=$argv[1]."_".$y."-".$m."-".$d.".json";                      // new file name
     $tbegin=mktime(0,0,0,$m,$d,$y);
   }
   $arrpos=intval(($fct-$tbegin)/60);

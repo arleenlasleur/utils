@@ -14,5 +14,5 @@ function keyproc(e){
   }
 }
 document.addEventListener("keydown",keyproc);
-console.log("%cPress "+"%cCtrl"+"%c to add, "+"%cShift"+"%c to dump. "+"%cCtrl+Shft+I disabled.","color:#fff","color:#77f","color:#fff","color:#77f","color:#fff","color:#f33");
+console.log("%cPress "+"%cShift"+"%c to dump. "+"%cCtrl+Shft+I disabled.","color:#fff","color:#77f","color:#fff","color:#f33");
 
