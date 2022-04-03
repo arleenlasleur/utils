@@ -1,4 +1,5 @@
-<?php    
+<?php    // for multiple files written on single date
+         // filename template: yyyy-mm-dd*.json
 
 if('cli'!==PHP_SAPI) return;
 if(!isset($argv[1])) return;
