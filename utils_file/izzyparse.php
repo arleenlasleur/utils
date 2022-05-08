@@ -7,6 +7,7 @@ $ustr=json_decode($str);
 
 $tstr="[\"".str_replace(".info.json","",$argv[1])."\",\""
      .mb_convert_encoding($ustr->upload_date,"cp866","auto")."\",\""
+  //   .mb_convert_encoding($ustr->channel_id,"cp866","auto")."\",\""     // for YTId2CId
      .format_sec($ustr->duration)."\",\""
      .mb_convert_encoding($ustr->title,"cp866","auto")."\"],".PHP_EOL;
 

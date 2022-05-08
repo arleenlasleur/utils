@@ -1,11 +1,27 @@
 <?php
 if('cli'!==PHP_SAPI) return;
 
+// todo command-line switch "firstdate", for generate all months' days, even if empty. 29feb=gray.
+
 $path=".";
 $files=scandir($path);
 foreach($files as $key=>$name) if(strpos($name,".json")===false) unset($files[$key]);  // kill shit
 $files=array_values($files);  // reindex
 $nsvg=str_replace(".json",".svg",$files[0]);
+
+$markcolor="#0000ff";
+if(isset($argv[1])) switch($argv[1]){
+ case "1": $markcolor="#000080"; break;
+ case "2": $markcolor="#0000ff"; break;
+ case "3": $markcolor="#800000"; break;
+ case "4": $markcolor="#ff0000"; break;
+ case "5": $markcolor="#808000"; break;
+ case "6": $markcolor="#008080"; break;
+ case "7": $markcolor="#803300"; break;
+ case "8": $markcolor="#6c5353"; break;
+ case "9": $markcolor="#5a2ca0"; break;
+ case "0": $markcolor="#3771c8"; break;
+}
 
 $fp=fopen($nsvg,"w");
 
@@ -47,7 +63,7 @@ foreach($files as $fname){
         $oce=$i;       // end
         $xp=$ocb/10;
         $wi=($oce-$ocb)/10;
-        fwrite($fp,"    <rect id=\"rect".$id."\" style=\"opacity:1;fill:#0000ff;\" width=\"".$wi
+        fwrite($fp,"    <rect id=\"rect".$id."\" style=\"opacity:1;fill:".$markcolor.";\" width=\"".$wi
           ."\" height=\"2\" x=\"".$xp."\" y=\"".($nfile*4)."\" />".PHP_EOL);
       }
       $last=$curr;

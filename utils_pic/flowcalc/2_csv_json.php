@@ -2,6 +2,8 @@
 
 if('cli'!==PHP_SAPI) return;
 if(!isset($argv[1])) return;
+$ena_unique_name=true;
+if( isset($argv[2]) && $argv[2]=="/x") $ena_unique_name=false;
 
 $first=true;
 $workmins;
@@ -16,7 +18,8 @@ foreach ($fpi as $line){
     $y= date ("Y", $fct);
     $m= date ("m", $fct);
     $d= date ("d", $fct);
-    $nfile=$argv[1]."_".$y."-".$m."-".$d.".json";                      // new file name
+    $nfile=$y."-".$m."-".$d.".json";                        // new file name
+    if($ena_unique_name) $nfile=$argv[1]."_".$nfile;
     $tbegin=mktime(0,0,0,$m,$d,$y);
   }
   $arrpos=intval(($fct-$tbegin)/60);
