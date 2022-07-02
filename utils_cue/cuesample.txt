@@ -1,0 +1,50 @@
+filename "OMVTM01 2018 apr-iILdkT264TM.cue"
+howto: dragndrop .m4a on mkvmergegui window anywhere, muxing fields will open
+       select Output tab, dragndrop .cue on chapters file field (right)
+
+//  format-ready layout:
+//  TRACK 01 AUDIO    INDEX 01 00:00:00    TITLE "BLVCK CEILING - VOID"
+//  TRACK 02 AUDIO    INDEX 01 01:22:00    TITLE "FUNERAL FLOWERS - Ya ne oni"
+
+PERFORMER "OMVTM01"    // for be displayed thr separate cue file (m4a+cue)
+TITLE "OMVTM01"        // for aac->mka->m4a
+FILE "OMVTM01 2018 apr-iILdkT264TM.m4a" M4A
+  TRACK 01 AUDIO
+    INDEX 01 00:00:00
+    TITLE "Gareth Emery - Long Way Home (Ciaran McAuley rmx)"
+  TRACK 02 AUDIO
+    INDEX 01 03:01:00
+    TITLE "Neev Kennedy - Sail The Stormy Waters (Extended mix)"
+  TRACK 03 AUDIO
+    INDEX 01 07:43:00
+    TITLE "Saad Ayub & Cristina Soto - Daylight (Amir Hussain mix)"
+  TRACK 04 AUDIO
+    INDEX 01 12:35:00
+    TITLE "Steve Allen & Sue McLaren - Old Flame (Extended mix)"
+  TRACK 05 AUDIO
+    INDEX 01 17:38:00
+    TITLE "Solis & Sean Truby With Cari - Easy Way Out (Extended mix)"
+  TRACK 06 AUDIO
+    INDEX 01 22:02:00
+    TITLE "Roman Messer ft Christina Novelli - Fireflies (Jorn van Deynhoven rmx)"
+  TRACK 07 AUDIO
+    INDEX 01 26:44:00
+    TITLE "Moonsouls & Marjan - Running Wild (Extended mix)"
+  TRACK 08 AUDIO
+    INDEX 01 31:22:00
+    TITLE "Michael Milov ft Angel Falls - I'll Be With You (Extended mix)"
+  TRACK 09 AUDIO
+    INDEX 01 35:33:00
+    TITLE "DT8 Project ft Andrea Britton - Winter (Solis & Sean Truby vs Ultimate rmx)"
+  TRACK 10 AUDIO
+    INDEX 01 40:25:00
+    TITLE "Fredd Moz ft Sara Houston - Free Flyer (Eryon Stocker rmx)"
+  TRACK 11 AUDIO
+    INDEX 01 45:38:00
+    TITLE "Alan Morris & Enzo ft Jess Morgan - Tapestry of Us (Extended mix)"
+  TRACK 12 AUDIO
+    INDEX 01 49:41:00
+    TITLE "Temple One ft Deirdre McLaughlin - Reaching For A Dream (Original mix)"
+  TRACK 13 AUDIO
+    INDEX 01 53:38:00
+    TITLE "Giuseppe Ottaviani ft Thea Riley - On The Way You Go (OnAir Extended mix)"

@@ -1,0 +1,2 @@
+rem "C:\Program Files\MKVToolNix\mkvextract.exe" "infile.mka" tracks 0:"spc containing name.aac"
+rem "C:\Program Files\MKVToolNix\mkvmerge.exe" --ui-language en --output "E:\YT\musics\vt\om\stripped\OMVTM02 2018 jun-aeje_7oLCQk.mka" --language 0:und "E:\YT\musics\vt\om\stripped\OMVTM02 2018 jun-aeje_7oLCQk.m4a" --chapter-language und --chapters "E:\YT\musics\vt\om\done\OMVTM02 2018 jun-aeje_7oLCQk.cue"
