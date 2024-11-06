@@ -3,7 +3,7 @@
 <head>
 <meta charset="windows-1251" />
 <style>
-body{background:linear-gradient(#aaf,#113);height: 100vh;}
+body{background:linear-gradient(#aaf,#113);height: 100vh; overflow:hidden;}
 span#about{color:#062;}
 div#atten{color:#a21; font-weight:bold;}
 </style>
@@ -13,7 +13,7 @@ div#atten{color:#a21; font-weight:bold;}
 <div id="atten">This proggy uses Windows-1251 encoding / Данная программа работает в кодировке 1251/русская Windows.</div>
 <div>Для перевода на UTF8 проще всего пересохранить файл в Notepad++/FAR, сменив заголовок charset.</div>
 <br />
-<textarea id="message" wrap=physical rows=10 cols=120></textarea><br>
+<textarea id="message" wrap=physical rows=20 cols=120></textarea><br>
 <input type="checkbox" id="conceal" /> <label for="conceal">Enable unconcealed replace / Разрешить нескрытую (визуально заметную) замену</label>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button id="replace">Go / Замена &gt;&gt;&gt;</button>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button id="undo" disabled>Undo / Вернуть &lt;&lt;&lt;</button><br />
