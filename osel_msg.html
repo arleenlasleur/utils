@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="windows-1251" />
+<style>
+body{background:linear-gradient(#aaf,#113);height: 100vh;}
+span#about{color:#062;}
+div#atten{color:#a21; font-weight:bold;}
+</style>
+</head>
+<body>
+<div><span id="about">Comment obfuscator v. 0.0.1-2022.01.22</span>, by Arleen Lasleur.</div>
+<div id="atten">This proggy uses Windows-1251 encoding / Данная программа работает в кодировке 1251/русская Windows.</div>
+<div>Для перевода на UTF8 проще всего пересохранить файл в Notepad++/FAR, сменив заголовок charset.</div>
+<br />
+<textarea id="message" wrap=physical rows=10 cols=120></textarea><br>
+<input type="checkbox" id="conceal" /> <label for="conceal">Enable unconcealed replace / Разрешить нескрытую (визуально заметную) замену</label>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button id="replace">Go / Замена &gt;&gt;&gt;</button>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button id="undo" disabled>Undo / Вернуть &lt;&lt;&lt;</button><br />
+<input type="checkbox" id="yostr" checked/> <label for="yostr">Strip "yo" letter / Удалить букву "ё"</label>
+
+<script>
+var former;
+function doReplace(){
+  var content=document.getElementById("message").value;
+  former=content;
+  var bAllowUnconceal=document.getElementById("conceal").checked;
+  var bStripYO=document.getElementById("yostr").checked;
+  if(bStripYO) content=content.replace(/ё/g,"е");
+  content=content.replace(/у/g,"y");
+  if(bAllowUnconceal) content=content.replace(/к/g,"k");
+  content=content.replace(/е/g,"e");
+  if(bAllowUnconceal) content=content.replace(/н/g,"H");
+  content=content.replace(/г/g,"r");
+  if(bAllowUnconceal) content=content.replace(/з/g,"3");
+  content=content.replace(/х/g,"x");
+  if(bAllowUnconceal) content=content.replace(/в/g,"B");
+  content=content.replace(/а/g,"a");
+  content=content.replace(/п/g,"n");
+  content=content.replace(/р/g,"p");
+  content=content.replace(/о/g,"o");
+  content=content.replace(/с/g,"c");
+  content=content.replace(/и/g,"u");
+  content=content.replace(/т/g,"m");
+  if(bAllowUnconceal) content=content.replace(/ь/g,"b");
+  content=content.replace(/б/g,"6");
+  document.getElementById("message").value=content;
+  var content=document.getElementById("undo").disabled=false;
+}
+function doUndo(){
+  document.getElementById("message").value=former;
+  var content=document.getElementById("undo").disabled=true;
+}
+document.addEventListener("DOMContentLoaded",function(){
+  document.getElementById("replace").addEventListener("click",function(){ doReplace(); });
+  document.getElementById("undo").addEventListener("click",function(){ doUndo(); });
+});
+</script>
+</body>
+</html>
